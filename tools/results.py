@@ -31,6 +31,10 @@ def get_ada_embedding(text):
     return openai.Embedding.create(input=[text], model="text-embedding-ada-002")["data"][0]["embedding"]
 
 def main():
+    """
+    This function is the entry point of the program.
+    It parses command-line arguments and queries the Pinecone index using a string.
+    """
     # Parse command-line arguments
     parser = argparse.ArgumentParser(description="Query Pinecone index using a string.")
     parser.add_argument('objective', nargs='*', metavar='<objective>', help='''

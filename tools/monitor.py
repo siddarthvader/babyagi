@@ -9,6 +9,16 @@ from extensions.ray_objectives import CooperativeObjectivesListStorage
 from extensions.ray_tasks import CooperativeTaskListStorage
 
 def print_buffer(stdscr, lines):
+    """
+    Clears the stdscr screen and prints the lines at the specified coordinates.
+
+    Args:
+        stdscr: The curses window object.
+        lines: A list of strings representing the lines to be printed.
+
+    Returns:
+        None
+    """
     stdscr.clear()
     y = 0
     x = 0
